@@ -1,0 +1,162 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #302929;
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-gap: 4px;
+    height: 4em;
+    padding: 0.1em;
+    
+}
+.headerInfo > div > p > a{
+    color: black;
+    font-weight: bold;   
+}
+.header-title {
+    margin: 5px 15px;
+}
+.header-menu {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;  
+}
+.header-menu > p {
+    margin-right: 5px;
+}
+
+.first-part {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    /* text-align: center; */
+    color: #2b2839;
+
+}
+.profile-image {
+    width: 150px;
+    border-radius: 50%;
+}
+.profile-text {
+    margin-left: 20px;
+}
+.second-part {
+    margin: 40px 80px;
+   
+}
+
+h5 {
+    text-align: center;
+    margin-top: 5.375em;
+    margin-bottom: 2.375em;
+}
+h2, h4, h5 {
+    font-weight: bold;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    
+}
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(75px, 1fr));
+    grid-template-rows: minmax(75px, 1fr);
+    /* grid-template-rows: repeat(2, minmax(150px, 1fr)); */
+    grid-template-areas: 
+    "image image image"
+    "time time time"
+    "title title title"
+    "descriere descriere descriere";
+    grid-gap: 18px;
+    margin: 5px 10px;
+    
+}
+
+.image {
+    grid-area: image;
+    max-width: 100%;
+}
+.portofolio-card-time {
+     grid-area: time;
+     margin-top: 5px;
+     }
+.portfolio-card-title {
+    grid-area: title;
+    margin: 1px 0;
+    font-size: 1em; 
+    }
+.portfolio-card-p {
+    grid-area: descriere;
+    margin: 3px 0;
+    font-size: 0.7em;
+    }
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 0.5em;
+    text-align: center;
+    padding: 0.125em 0.375em;
+}
+
+footer > p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .headerInfo {
+    font-size: 0.65em;
+    color: black;
+        }
+    .headerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+         }
+    .header-title {
+    display: flex;
+    align-items: center;
+        }
+    .header-menu {
+    align-items: center;
+        }
+        
+       .first-part {
+           display: grid;
+           padding: 0;
+       } 
+       .second-part {
+        margin: 0 20px;
+   
+        }
+       .profile-image {
+           display: block;
+           margin-right: auto;
+           width: 180px;
+           
+       }
+        .portfolio {
+    display: grid;
+    grid-template-columns: minmax(75px, 1fr);
+    /* grid-template-rows: repeat(2, minmax(150px, 1fr)); */
+    grid-template-areas: 
+    "image"
+    "time"
+    "title"
+    "descriere";
+    grid-gap: 10px;
+    margin: 5px 5px;
+        } 
+   
+}

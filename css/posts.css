@@ -1,0 +1,157 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #302929;
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-gap: 4px;
+    height: 4em;
+    padding: 0.1em;
+    
+}
+.headerInfo > div > p > a{
+    color: black;
+    font-weight: bold;   
+}
+.header-title {
+    margin: 5px 15px;
+}
+.header-menu {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;  
+}
+.header-menu > p {
+    margin-right: 5px;
+}
+
+.central-article {
+    margin-top: 4.375em;
+
+}
+
+.central-article > p, h4 {
+    margin: 1.25em 1.875em;
+    padding: 0.3125em 0.625em;
+}
+
+.time {
+    font-size: 0.65em;
+    margin: 1.25em 1.875em;
+    padding: 0.3125em 0.625em;
+}
+
+.image-first {
+    
+    grid-row: 1;
+    background-size: cover;
+    width: 100%;
+    height: 20em;
+    background-image: url("https://i.ibb.co/tZ2L6J2/OIG3.jpg");
+    background-position: center;
+    margin: 5px 10px;
+    
+}
+
+h5 {
+    text-align: center;
+    margin-top: 4.375em;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(75px, 1fr));
+    grid-template-rows: minmax(75px, 1fr);
+    /* grid-template-rows: repeat(2, minmax(150px, 1fr)); */
+    grid-template-areas: 
+    "image image image"
+    "time time time"
+    "title title title"
+    "descriere descriere descriere";
+    grid-gap: 18px;
+    margin: 5px 10px;
+    
+}
+
+.image {
+    grid-area: image;
+    max-width: 100%;
+}
+.portofolio-card-time {
+     grid-area: time;
+     margin-top: 5px;
+     }
+.portfolio-card-title {
+    grid-area: title;
+    margin: 1px 0;
+    font-size: 1em; 
+    }
+.portfolio-card-p {
+    grid-area: descriere;
+    margin: 3px 0;
+    font-size: 0.7em;
+    }
+
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 0.5em;
+    text-align: center;
+    padding: 0.125em 0.375em;
+}
+
+footer > p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .headerInfo {
+    font-size: 0.65em;
+    color: black;
+        }
+    .headerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+         }
+    .header-title {
+    display: flex;
+    align-items: center;
+        }
+    .header-menu {
+    align-items: center;
+        }
+   .image-first {
+    height: 15em;  
+        } 
+    .portfolio {
+    display: grid;
+    grid-template-columns: minmax(75px, 1fr);
+    /* grid-template-rows: repeat(2, minmax(150px, 1fr)); */
+    grid-template-areas: 
+    "image"
+    "time"
+    "title"
+    "descriere";
+    grid-gap: 10px;
+    margin: 5px 5px;
+        } 
+    .first-article {
+    font-size: 0.75em;
+    }   
+}
